@@ -19,8 +19,7 @@ user = %User{
   cpf: "12345678901",
   email: "johndoe@seed.com",
   password: "2345v6f24q23c",
-  name: "John Doe Seed",
-  id: "b2869b80-e17d-46dd-adaf-349d1144bba6"
+  name: "John Doe Seed"
 }
 
 %User{id: user_id} = Repo.insert!(user)
