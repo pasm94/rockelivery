@@ -1,6 +1,8 @@
 defmodule Rockelivery.Users.CreateTest do
   use Rockelivery.DataCase, async: true
 
+  doctest Rockelivery.Users.Create
+
   import Mox
   import Rockelivery.Factory
 

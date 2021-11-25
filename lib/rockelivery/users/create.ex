@@ -1,6 +1,24 @@
 defmodule Rockelivery.Users.Create do
   alias Rockelivery.{Error, Repo, User}
 
+  @moduledoc """
+  Testando documentação do Moduledoc
+
+  Teste da função call/1
+  """
+
+  @doc """
+  Função para testar moduledoc
+
+  ## Bora ver
+
+  - parametro: struct do user
+
+  ## Exemplo
+
+      iex> 1 + 1
+      2
+  """
   def call(params) do
     cep = Map.get(params, "cep")
     changeset = User.changeset(params)
