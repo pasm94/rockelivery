@@ -60,9 +60,7 @@ defmodule Rockelivery.MixProject do
       {:hackney, "~> 1.17"},
       {:bypass, "~> 2.1", only: :test},
       {:mox, "~> 1.0", only: :test},
-      {:guardian, "~> 2.0"},
-      {:ex_doc, "~> 0.24", only: :dev, runtime: false},
-      {:earmark, "~> 1.3", only: :dev}
+      {:guardian, "~> 2.0"}
     ]
   end
 
