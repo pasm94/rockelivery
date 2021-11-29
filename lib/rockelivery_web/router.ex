@@ -31,6 +31,8 @@ defmodule RockeliveryWeb.Router do
 
     post "/users", UsersController, :create
     post "/users/signin", UsersController, :sign_in
+
+    post "/files", FilesController, :create
   end
 
   # Enables LiveDashboard only for development

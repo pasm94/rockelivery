@@ -1,4 +1,5 @@
 defmodule Rockelivery do
+  alias Rockelivery.Files.Create, as: FileCreate
   alias Rockelivery.Items.Create, as: ItemCreate
 
   alias Rockelivery.Orders.Create, as: OrderCreate
@@ -16,4 +17,6 @@ defmodule Rockelivery do
   defdelegate create_item(params), to: ItemCreate, as: :call
 
   defdelegate create_order(params), to: OrderCreate, as: :call
+
+  defdelegate create_file(params), to: FileCreate, as: :call
 end
