@@ -41,7 +41,7 @@ defmodule Rockelivery.UserTest do
 
       expected_response = %{
         age: ["must be greater than or equal to 18"],
-        cep: ["should be 8 character(s)"],
+        cep: ["should be 9999 character(s)"],
         cpf: ["should be 11 character(s)"],
         password: ["should be at least 6 character(s)"]
       }
