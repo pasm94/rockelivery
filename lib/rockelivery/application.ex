@@ -20,7 +20,8 @@ defmodule Rockelivery.Application do
       # Start a worker by calling: Rockelivery.Worker.start_link(arg)
       # {Rockelivery.Worker, arg}
       Rockelivery.Orders.ReportRunner,
-      worker(Rockelivery.Shared.Cache.Ets.CacheEts, [])
+      worker(Rockelivery.Shared.Cache.Ets.CacheEts, []),
+      {Server, 0}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
