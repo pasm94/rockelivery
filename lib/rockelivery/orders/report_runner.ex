@@ -20,8 +20,8 @@ defmodule Rockelivery.Orders.ReportRunner do
     {:ok, state}
   end
 
+  # recebe qualquer tipo de mensagem, ex: da function schedule_report_generation, o Process.send_after chama o handle info
   @impl true
-  # recebe qualquer tipo de mensagem
   def handle_info(_msg, state) do
     Logger.info("Generating report...")
 
