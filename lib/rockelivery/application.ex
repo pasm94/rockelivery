@@ -6,8 +6,6 @@ defmodule Rockelivery.Application do
   use Application
 
   def start(_type, _args) do
-    import Supervisor.Spec
-
     children = [
       # Start the Ecto repository
       Rockelivery.Repo,
@@ -20,7 +18,7 @@ defmodule Rockelivery.Application do
       # Start a worker by calling: Rockelivery.Worker.start_link(arg)
       # {Rockelivery.Worker, arg}
       Rockelivery.Orders.ReportRunner,
-      worker(Rockelivery.Shared.Cache.Ets.CacheEts, []),
+      Rockelivery.Shared.Cache.Ets.CacheEts,
       {Server, 0}
     ]
 
@@ -28,6 +26,8 @@ defmodule Rockelivery.Application do
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Rockelivery.Supervisor]
     Supervisor.start_link(children, opts)
+
+    # Supervisor eh um processo que monitora os outros processos
   end
 
   # Tell Phoenix to update the endpoint configuration

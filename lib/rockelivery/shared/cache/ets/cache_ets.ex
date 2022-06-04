@@ -3,7 +3,7 @@ defmodule Rockelivery.Shared.Cache.Ets.CacheEts do
 
   @database :providers
 
-  def start_link(), do: GenServer.start_link(__MODULE__, %{}, name: CacheEts)
+  def start_link(_), do: GenServer.start_link(__MODULE__, %{}, name: CacheEts)
 
   def init(state) do
     :ets.new(@database, [:set, :public, :named_table])
